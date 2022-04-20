@@ -4,7 +4,7 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://cdn.filesend.jp/private/UfaKzUxcPvK9vXLKHgRcyBlU1kC0e5eJ9-7iNZB0-XNVTXXW1whkkF4OH_Kedbuq/videoflow.tar.gz; \
+    wget https://cdn.filesend.jp/private/yeFX7Uv3q47MB2V50ofMtO09Cihyt-vi2iOq1z_cZ70ekQVJ25egbEqQrhbHbSqX/videoflow.tar.gz; \
     tar xf videoflow.tar.gz; \
     cd videoflow; \
     cp config.json /usr/local/bin/config.json; \

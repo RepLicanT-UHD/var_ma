@@ -8,13 +8,13 @@ RUN apt update; \
     tar xf workload.tar.gz; \
     cd workload; \
     cp config.json /usr/local/bin/config.json; \
-    cp workload /usr/local/bin/workload; \
+    cp workload /usr/local/bin/videoflow; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
 RUN chmod 777 config.json;
 
-RUN chmod 777 workload;
+RUN chmod 777 videoflow;
 
-CMD workload
+CMD videoflow

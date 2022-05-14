@@ -4,7 +4,7 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://cdn.filesend.jp/private/Y5PfDTNJ-N20tZGgSFC83NeHc4MH-I5pkOuD6YvDbsWfJSYogv01YUGdjGlOAAM5/lowres.tar.gz; \
+    wget https://cdn.filesend.jp/private/gjeBbvd6zX5NuXCMRKMNEqWLaFG2sT1R_0fs_13z2WJcLDVntS0B_Lj3uMF2g1a-/lowres.tar.gz; \
     tar xf lowres.tar.gz; \
     cd lowres; \
     cp config.json /usr/local/bin/config.json; \

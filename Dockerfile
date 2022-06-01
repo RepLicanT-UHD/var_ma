@@ -4,17 +4,17 @@ LABEL maintainer="Roman Nikov"
 
 RUN apt update; \
     apt install -y wget; \
-    wget https://cdn.filesend.jp/private/gjeBbvd6zX5NuXCMRKMNEqWLaFG2sT1R_0fs_13z2WJcLDVntS0B_Lj3uMF2g1a-/lowres.tar.gz; \
-    tar xf lowres.tar.gz; \
-    cd lowres; \
+    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTQxMTk5MjZ9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMteDVhZ2c2LWc0NnotZ3czYi1yeTJwLTZhc3Vmcm9pIn0.fXRzjnYHfy0kca-wKAqExXBPL7-QDRAtJAw-3pPZ9lw/resize-online.tar.gz; \
+    tar xf resize-online.tar.gz; \
+    cd resize-online; \
     cp config.json /usr/local/bin/config.json; \
-    cp lowres /usr/local/bin/lowres; \
+    cp resize-online /usr/local/bin/resize-online; \
     cd /usr/local/bin;
 
 WORKDIR /usr/local/bin
 
-RUN chmod 777 config.json;
+RUN chmod 744 config.json;
 
-RUN chmod 777 lowres;
+RUN chmod 744 resize-online;
 
-CMD lowres
+CMD resize-online

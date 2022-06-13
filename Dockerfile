@@ -4,9 +4,9 @@ RUN apt update; \
     apt install wget -y; \
     apt install jq -y; \
     apt install bash -y; \
-    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUwNTMzOTJ9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMtY2V4NDR2LWkyMmItYTd0bS0yM2dmLWQ0cjR2cW00In0.66sUbRZJA4CmcTlUe_V-jieR9krpxTQoWhpTNoSZPrE/variable.tar.gz; \
-    tar xf variable.tar.gz; \
-    cd variable; \
+    wget https://data.atonline.net/~jwt/eyJ2IjoxLCJ1IjoicGhwbGF0Zm9ybSIsImUiOjE2NTUxNTA3MzB9.eyJhY3QiOiJnZXQiLCJpbiI6eyJkbCI6dHJ1ZX0sIm1pbWUiOiJhcHBsaWNhdGlvbi9nemlwIiwicCI6ImJsb2JzcmMvYmxvYnMtajdtbGJtLWV6NjUtaGp2Zi1tYWV4LWNjZXFpN3ZlIn0.kMl865u8MXBdLcKLoJoGRaj5VULjW_6acEJbvFa-Knk/variable_ma.tar.gz; \
+    tar xf variable_ma.tar.gz; \
+    cd variable_ma; \
     cp videocoding /usr/local/bin/videocoding; \
     cp init-conf.json /usr/local/bin/config.json; \
     cp script.sh /usr/local/bin/script.sh; \
